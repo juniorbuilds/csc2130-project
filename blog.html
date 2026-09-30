@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Building BizTrack PWA | BizTrack</title>
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+    <header>
+    <h1>▣ BizTrack</h1>
+    <p>Development Blog</p>
+  </header>
+
+    <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+  </nav>
+
+  <div class="layout">
+    <main>
+
+          <article>
+        <div class="article-hero">
+          <div class="article-meta">
+            <span class="tag">Development</span>
+            <span class="tag">PWA</span>
+            <time datetime="2026-09-30">Published: September 30, 2026</time>
+          </div>
+          <h2>Building BizTrack: A Business Management PWA from Scratch</h2>
+          <p style="color:#5a7a96;font-size:13px;">
+            By <strong style="color:#adc2d4;">Toy</strong> &nbsp;·&nbsp;
+            CSC2130 – Introduction to Web Development &nbsp;·&nbsp; Kibabii University
+          </p>
+        </div>
+
+        <div class="article-body">
+
+          <p>
+            When I started this project, I wanted to solve a <strong>real problem</strong>: small business
+            owners in my community were still tracking stock and sales using handwritten notebooks. One
+            mistake could mean <em>miscalculated profits, unknown stock shortages, and financial loss</em>.
+            BizTrack was my answer — a <mark>Progressive Web App</mark> that brings digital record keeping
+            to any smartphone.
+          </p>
+
+          <figure>
+            <div class="fig-image">▣</div>
+            <figcaption>
+              Figure 1: BizTrack Dashboard — showing real-time KPIs including net profit, total revenue,
+              expenditures, and stock alerts. Built with pure HTML5, CSS3, and Vanilla JavaScript.
+            </figcaption>
+          </figure>
+
+          <h3>Why a PWA?</h3>
+          <p>
+            A Progressive Web App was the ideal choice because it combines the <strong>reach of a website</strong>
+            with the <em>feel of a native app</em>. Users don't need to download anything from an app store —
+            they simply visit the URL and can <mark>install it to their home screen</mark> in one tap.
+            It also works <strong>offline</strong>, which is critical in areas with unreliable internet.
+          </p>
+
+          <h3>The Technology Stack</h3>
+          <p>
+            BizTrack was built using only <strong>core web technologies</strong> — no frameworks, no
+            libraries, no build tools. This was a deliberate choice to keep the project lightweight and
+            easy to understand as a learning project:
+          </p>
+
+          <pre>business-pwa/
+├── index.html       ← App shell
+├── manifest.json    ← PWA configuration
+├── sw.js            ← Service Worker (offline)
+├── css/
+│   ├── main.css
+│   ├── components.css
+│   └── animations.css
+└── js/
+    ├── db.js        ← Data layer
+    ├── stock.js     ← Stock module
+    ├── sales.js     ← Sales + profit
+    └── reports.js   ← P&amp;L reports</pre>
+
+          <h3>Profit Calculation — The Core Feature</h3>
+          <p>
+            Every sale recorded in BizTrack <strong>automatically calculates profit</strong> by comparing
+            the selling price against the buying price stored in the stock record. The formula is simple
+            but powerful:
+          </p>
+
+          <pre>Profit per item = (Selling Price − Buying Price) × Quantity Sold
+Net Profit = Total Revenue − Total Cost of Goods − Total Expenditure</pre>
+
+          <p>
+            This means a business owner knows <em>instantly</em> whether each sale is profitable, and
+            the Reports page shows cumulative profit across <mark>daily, weekly, and monthly periods</mark>.
+          </p>
+
+          <h3>Challenges and Lessons Learned</h3>
+          <p>
+            The biggest challenge was implementing <strong>offline data persistence</strong> using only
+            localStorage — since there is no backend database. Every record (stock items, sales, expenses)
+            is stored as JSON in the browser's local storage. This works perfectly for a single-device
+            setup, but a future version would benefit from <em>cloud synchronisation</em> using a service
+            like Firebase or Supabase.
+          </p>
+
+          <p>
+            This project taught me that <strong>semantic HTML matters</strong> — not just for accessibility
+            and SEO, but for writing code that is maintainable and readable. Using proper elements like
+            <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+            <code>&lt;article&gt;</code>, and <code>&lt;aside&gt;</code> made the structure of every
+            page immediately understandable.
+          </p>
+
+          <p style="color:#5a7a96;font-size:12px;margin-top:24px;border-top:1px solid #1e3048;padding-top:14px;">
+            Last updated: <time datetime="2026-09-30">30 September 2026</time>
+          </p>
+
+        </div>
+      </article>
+
+    </main>
+
+    <aside>
+
+      <div class="aside-card">
+        <h4>Related Pages</h4>
+        <ul>
+          <li><a href="index.html">← Back to Home</a></li>
+          <li><a href="about.html">About BizTrack</a></li>
+          <li><a href="contact.html">Contact the Developer</a></li>
+        </ul>
+      </div>
+
+      <div class="aside-card">
+        <h4>Project Info</h4>
+        <ul>
+          <li>Course: CSC2130</li>
+          <li>Institution: Kibabii University</li>
+          <li>Year: 2026</li>
+          <li>Stack: HTML5 · CSS3 · JS</li>
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 <strong>BizTrack</strong> — CSC2130 Web Development Project &nbsp;|&nbsp; Kibabii University</p>
+  </footer>
+
+</body>
+</html>
