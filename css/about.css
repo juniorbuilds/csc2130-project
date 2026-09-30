@@ -1,0 +1,269 @@
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a1018;
+    color: #e2eaf2;
+    line-height: 1.7;
+}
+
+a {
+    color: #00e5b0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background: #111c27;
+    border-bottom: 3px solid #00e5b0;
+    padding: 20px 40px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #00e5b0;
+    letter-spacing: 0.04em;
+}
+
+header p {
+    font-size: 13px;
+    color: #5a7a96;
+    margin-top: 4px;
+}
+
+nav {
+    background: #172030;
+    padding: 0 40px;
+    border-bottom: 1px solid #1e3048;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5a7a96;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00e5b0;
+    border-bottom-color: #00e5b0;
+    text-decoration: none;
+    background: rgba(0, 229, 176, 0.05);
+}
+
+main {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* Section styles */
+section {
+    background: #111c27;
+    border: 1px solid #1e3048;
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 28px;
+}
+
+section.highlight {
+    border-left: 4px solid #00e5b0;
+}
+
+section.orange {
+    border-left: 4px solid #ff6b35;
+}
+
+section.yellow {
+    border-left: 4px solid #f7c948;
+}
+
+/* Q3: Headings */
+h1 {
+    font-size: 32px;
+    color: #e2eaf2;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #00e5b0;
+    margin-bottom: 14px;
+    letter-spacing: 0.03em;
+}
+
+h3 {
+    font-size: 16px;
+    color: #adc2d4;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+p {
+    color: #adc2d4;
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+/* Q3: Text formatting */
+strong {
+    color: #e2eaf2;
+    font-weight: 700;
+}
+
+em {
+    color: #f7c948;
+    font-style: italic;
+}
+
+mark {
+    background: rgba(0, 229, 176, 0.15);
+    color: #00e5b0;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+/* Q8: Ordered list */
+ol.steps {
+    padding-left: 0;
+    counter-reset: steps;
+    list-style: none;
+}
+
+ol.steps li {
+    counter-increment: steps;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #1e3048;
+    font-size: 14px;
+    color: #adc2d4;
+}
+
+ol.steps li:last-child {
+    border-bottom: none;
+}
+
+ol.steps li::before {
+    content: counter(steps);
+    background: #00e5b0;
+    color: #0a1018;
+    font-weight: 800;
+    font-size: 13px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Q9: Description list */
+dl {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0;
+}
+
+dt {
+    background: rgba(0, 229, 176, 0.07);
+    border: 1px solid #1e3048;
+    border-right: none;
+    padding: 10px 14px;
+    font-weight: 700;
+    color: #00e5b0;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+}
+
+dd {
+    border: 1px solid #1e3048;
+    border-bottom: none;
+    padding: 10px 16px;
+    color: #adc2d4;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+dt:not(:first-of-type),
+dd:not(:first-of-type) {
+    border-top: 1px solid #1e3048;
+}
+
+dt:last-of-type,
+dd:last-of-type {
+    border-bottom: 1px solid #1e3048;
+}
+
+/* Q10: Nested list */
+ul.nested {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.nested>li {
+    background: #172030;
+    border: 1px solid #1e3048;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #e2eaf2;
+    font-size: 14px;
+}
+
+ul.nested>li>ul {
+    margin-top: 10px;
+    padding-left: 16px;
+    border-left: 2px solid #00e5b0;
+    list-style: disc;
+}
+
+ul.nested>li>ul>li {
+    font-weight: 400;
+    color: #5a7a96;
+    font-size: 13px;
+    padding: 3px 0;
+}
+
+ul.nested>li>ul>li::marker {
+    color: #00e5b0;
+}
+
+footer {
+    background: #111c27;
+    border-top: 1px solid #1e3048;
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+    color: #5a7a96;
+}
+
+footer strong {
+    color: #00e5b0;
+}
